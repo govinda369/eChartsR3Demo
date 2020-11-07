@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Charts</title>
+    <meta charset="UTF-8">
+    <script src="./dist/Chart.min.js"></script>
+    <script src="./dist/utils.js"></script>
+    <style>canvas{-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}</style>
+</head>
+<body>
+    <div id="container" style="width:100%";>
+        <canvas id="canvas"></canvas>
+    </div>
+<script>
+		var color = Chart.helpers.color;
+		var ctx = document.getElementById('canvas').getContext('2d');
+		var option ={};
+		canvas.onclick = function(evt){
+			var activePoints = myChart.getElementsAtEvent(evt);
+			window.webBrowser.ue_clicked('{"name":"' + activePoints[0]._index + '"}');
+		}
+  </script>
+</body>
+</html>

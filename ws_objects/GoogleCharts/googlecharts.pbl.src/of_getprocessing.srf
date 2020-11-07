@@ -1,0 +1,24 @@
+﻿$PBExportHeader$of_getprocessing.srf
+global type of_getprocessing from function_object
+end type
+
+forward prototypes
+global function integer of_getprocessing (string as_dataobject)
+end prototypes
+
+global function integer of_getprocessing (string as_dataobject);
+DataStore 	lds_data
+Integer 	li_proce
+String 	ls_proce
+
+lds_data = Create DataStore
+lds_data.DataObject = as_dataObject
+
+ls_proce = lds_data.Describe("DataWindow.Processing")
+If IsNumber( ls_proce ) Then
+	li_proce = integer ( ls_proce )
+End If
+
+return li_proce
+end function
+

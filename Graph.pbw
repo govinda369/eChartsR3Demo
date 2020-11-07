@@ -1,0 +1,9 @@
+Save Format v3.0(19990112)
+@begin Targets
+ 0 "ECharts\\echarts.pbt";
+ 1 "Chartjs\\chartjs.pbt";
+ 2 "GoogleCharts\\googlecharts.pbt";
+@end;
+DefaultTarget "ECharts\\echarts.pbt";
+DefaultExportEncode "UTF-8";
+DefaultRemoteTarget "ECharts\\echarts.pbt";
