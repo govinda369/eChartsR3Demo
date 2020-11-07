@@ -358,7 +358,7 @@ string facename = "Segoe UI"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "Appeon Inc."
-alignment alignment = center!
+alignment alignment = Right!
 boolean focusrectangle = false
 end type
 
