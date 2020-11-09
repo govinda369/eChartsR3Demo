@@ -8,8 +8,6 @@ type st_1 from statictext within w_kline
 end type
 type st_2 from statictext within w_kline
 end type
-type st_3 from statictext within w_kline
-end type
 end forward
 
 global type w_kline from w_chart_base
@@ -21,7 +19,6 @@ boolean righttoleft = true
 dw_1 dw_1
 st_1 st_1
 st_2 st_2
-st_3 st_3
 end type
 global w_kline w_kline
 
@@ -224,12 +221,10 @@ call super::create
 this.dw_1=create dw_1
 this.st_1=create st_1
 this.st_2=create st_2
-this.st_3=create st_3
 iCurrent=UpperBound(this.Control)
 this.Control[iCurrent+1]=this.dw_1
 this.Control[iCurrent+2]=this.st_1
 this.Control[iCurrent+3]=this.st_2
-this.Control[iCurrent+4]=this.st_3
 end on
 
 on w_kline.destroy
@@ -237,7 +232,6 @@ call super::destroy
 destroy(this.dw_1)
 destroy(this.st_1)
 destroy(this.st_2)
-destroy(this.st_3)
 end on
 
 event open;call super::open;
@@ -341,24 +335,6 @@ long textcolor = 33554432
 long backcolor = 67108864
 string text = "WebBrowser"
 alignment alignment = center!
-boolean focusrectangle = false
-end type
-
-type st_3 from statictext within w_kline
-integer x = 4165
-integer y = 36
-integer width = 448
-integer height = 84
-boolean bringtotop = true
-integer textsize = -11
-fontcharset fontcharset = ansi!
-fontpitch fontpitch = variable!
-fontfamily fontfamily = swiss!
-string facename = "Segoe UI"
-long textcolor = 33554432
-long backcolor = 67108864
-string text = "Appeon Inc."
-alignment alignment = Right!
 boolean focusrectangle = false
 end type
 
